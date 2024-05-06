@@ -1,1 +1,92 @@
-<p>signup works!</p>
+<div class="wrapper-container">
+    <video [autoplay]="true" [muted]="true" [loop]="true" playsInline id="bg-video">
+        <source type="video/mp4" src="./../../../assets/bg-videos/bg-video.mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay"></div>
+    <div class="container-fluid flex-container inner-container">
+        <div class="left-container w-50 h-100">
+            <h3>Join the Club</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla quasi harum.</p>
+            <div>
+                <div class="flex-container">
+                    <div class="border">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="flex-container flex-column">
+                        <h5>Community</h5>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
+                <div class="flex-container">
+                    <div class="border">
+                        <i class="bi bi-basket2-fill"></i>
+                    </div>
+                    <div class="flex-container flex-column">
+                        <h5>Community</h5>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
+                <div class="flex-container">
+                    <div class="border">
+                        <i class="bi bi-briefcase-fill"></i>
+                    </div>
+                    <div class="flex-container flex-column">
+                        <h5>Community</h5>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-container w-50 h-100">
+            <p class="form-title">Weclome</p>
+            <small class="form-sub-title">Join gazillions of people online</small>
+            <div class="form-wrapper">
+                <form>
+                    <div class="form-group">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <input type="text" class="no-outline sm-placeholder-text" placeholder="Enter name">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <input type="text" class="no-outline sm-placeholder-text" placeholder="Enter username">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <input type="text" class="no-outline sm-placeholder-text" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-key-fill"></i>
+                        </div>
+                        <input type="password" class="no-outline sm-placeholder-text" placeholder="Enter Password">
+                    </div>
+
+                    <div class="flex-container mb-1 justify-content-between">
+                        <div class="flex-container align-center ">
+                            <input type="checkbox" name="remember">
+                            <label for="remember">Remember</label>
+                        </div>
+                        <div>
+                            <small>Forgot Passowrd?</small>
+                        </div>
+                    </div>
+
+                    <button class="btn">create account</button>
+                    <p class="auth-footer-txt" (click)="reroute()">Have have an acc? Login</p>
+                </form>
+            </div>
+        </div>        
+    </div>
+</div>
