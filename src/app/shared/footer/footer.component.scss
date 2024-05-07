@@ -1,0 +1,22 @@
+.container-fluid {
+    position: relative;
+    
+    .container {
+        .overlay {
+            padding: 2rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.527);
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+        }
+    }
+}

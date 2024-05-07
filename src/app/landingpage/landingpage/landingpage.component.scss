@@ -1,0 +1,53 @@
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 2rem;
+
+    .hero-section {
+        height: 100vh;
+        text-align: center;
+        background-image: url('.././../../assets//bg-images/bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 200;
+
+        .hero-btns {
+            width: 370px;
+            gap: 1rem;
+            z-index: 200;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.527);
+        }
+
+    }
+
+    .info-section {
+        height: 100vh;
+
+        .col-md-5 {
+            padding: 1rem;
+        }
+
+        .pic-tiles-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+
+            .pic-tile {
+                background-color: tomato;
+            }
+        }
+    }
+}

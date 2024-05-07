@@ -15,11 +15,26 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
+    // overflow-x: hidden;
+
+    .title {
+        text-decoration: underline;
+    }
+
+    //universal txt stylings
+    .hero-title {
+        color: var(--light-panel);
+        z-index: 200;
+    }
+
+    .hero-text {
+        color: var(--secondary-color);
+        z-index: 200;
+    }
 
     .sm-placeholder-text {
         font-size: 14px;
     }
-
 
     .btn {
         height: 42px;
@@ -34,6 +49,15 @@ body {
         font-size: 14px;
     }
 
+
+    //center items
+    .center-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    //
 
     //remove outlines and borders on inputs
     .no-outline {
@@ -85,13 +109,11 @@ body {
             height: auto;
             z-index: 1;
             transform: translate(-50%, -50%);
-
         }
 
         .inner-container {
             align-items: center;
             justify-content: center;
-
         }
 
         .container-fluid {
@@ -99,7 +121,7 @@ body {
             width: 760px;
             margin: 0;
             padding: 0;
-            z-index: 3000;
+            z-index: 3000;        
 
             .left-container {
                 color: var(--secondary-color);
@@ -154,9 +176,7 @@ body {
                 .form-sub-title {
                     color: var(--text-dark--gray);
                     font-size: 12px;
-
                 }
-
 
                 .form-wrapper {
                     margin-top: 16px;
@@ -173,8 +193,7 @@ body {
                         margin: 8px 0;
                         width: 100%;
                         display: flex;
-                        align-items: center;
-                        
+                        align-items: center;                        
 
                         .icon-wrapper {
                             display: flex;
