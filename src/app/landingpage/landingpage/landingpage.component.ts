@@ -8,11 +8,10 @@ import { Router } from '@angular/router';
 })
 export class LandingpageComponent {
 
-
   constructor(private router: Router){}
 
   signup() {
-    this.router.navigate(['auth/signup'])
+    this.router.navigate(['auth/login'])
   }
 
 }
