@@ -7,7 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class AppComponent implements OnInit {
   title = 'zeraki';
-  opened: boolean = true
+  opened: boolean = false
 
   constructor(
     private spinner: NgxSpinnerService){

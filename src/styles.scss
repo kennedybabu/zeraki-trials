@@ -57,6 +57,11 @@ body {
         text-decoration: underline;
     }
 
+    .no-borders {
+        border: none!important;
+        outline: none!important;
+    }
+
     //universal txt stylings
     .hero-title {
         color: var(--light-panel);

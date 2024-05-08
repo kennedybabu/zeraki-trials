@@ -10,7 +10,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { NavComponent } from './shared/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
-// import { TotalUsersPieChartComponent } from './shared/charts/pie-charts/total-users-pie-chart/total-users-pie-chart.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
-    // TotalUsersPieChartComponent
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <div>
-                <h4>Name: {{ userObject.username }} </h4>
+                <h6>Name: {{ userObject.username }} </h6>
                 <p>Phone Number: {{ userObject.msisdn }}</p>
-                <p>Role: Teacher</p>
+                <p>Role: {{userObject.role }}</p>
             </div>
-            <div class="row gap-2">
-                <div class="card shadow col-md-4">
+            <div class="row">
+                <div class="card no-borders shadow col-md-4">
                   <div class="row">
                     <div class="col-md-5 p-2">
                         <h6 class="chart-title">Total Students</h6>
@@ -25,8 +25,8 @@
                     </div>
                   </div>
                 </div>    
-                <div class="card shadow col-md-7">
-        
+                <div class="card no-borders shadow col-md-8">
+                    <app-mixed-chart></app-mixed-chart>
                 </div>
             </div>
         </div>

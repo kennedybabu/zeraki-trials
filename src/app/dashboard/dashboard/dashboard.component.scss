@@ -2,9 +2,16 @@
     height: 100vh;
     padding: 1rem;
 
-    // .row {
-
-    // }
+    .row {
+        h6 {
+            font-weight: 500;
+        }
+        
+        p {
+            font-size: 13px;
+            margin-bottom: .3rem;            
+        }
+    }
 
     .card {
         #chart {
@@ -15,6 +22,7 @@
 
         #bar-chart {
             max-width: 650px;
+            max-height: 500px;
             margin: 35px auto;
           }
     }

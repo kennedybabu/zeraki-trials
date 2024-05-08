@@ -13,6 +13,7 @@ import {
   ApexXAxis
 } from "ng-apexcharts";
 import { StudentServiceTsService } from 'src/app/services/student.service.ts.service';
+import { TeacherService } from 'src/app/services/teacher/teacher.service';
 
 export type ChartOptions = {
   series: ApexNonAxisChartSeries;
@@ -35,9 +36,9 @@ export class DashboardComponent implements OnInit {
   allStudents!: User[]
 
   constructor(
-    private studentService:StudentServiceTsService) {
-
-
+    private studentService:StudentServiceTsService,
+    private teacherService:TeacherService) {
+      
     this.chartOptions = {
       series: [34, 44],
       chart: {
@@ -69,6 +70,14 @@ export class DashboardComponent implements OnInit {
 
 
     this.getTotalStudents()
+    this.getAllTeachers()
+  }
+
+  //get teachers 
+  getAllTeachers() {
+    this.teacherService.getAllTeachers().subscribe((res) => {
+      console.log(res)
+    })
   }
 
   //teacher role requests 
