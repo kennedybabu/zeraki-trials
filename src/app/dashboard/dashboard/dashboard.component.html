@@ -1,1 +1,34 @@
-<p>dashboard works!</p>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h4>Name: {{ userObject.username }} </h4>
+                <p>Phone Number: {{ userObject.msisdn }}</p>
+                <p>Role: Teacher</p>
+            </div>
+            <div class="row gap-2">
+                <div class="card shadow col-md-4">
+                  <div class="row">
+                    <div class="col-md-5 p-2">
+                        <h6 class="chart-title">Total Students</h6>
+                        <div id="chart">
+                            <apx-chart
+                              [series]="chartOptions.series"
+                              [chart]="chartOptions.chart"
+                              [labels]="chartOptions.labels"
+                              [responsive]="chartOptions.responsive"
+                            ></apx-chart>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                    
+                    </div>
+                  </div>
+                </div>    
+                <div class="card shadow col-md-7">
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

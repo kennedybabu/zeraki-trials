@@ -7,10 +7,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class AppComponent implements OnInit {
   title = 'zeraki';
+  opened: boolean = true
 
   constructor(
-    private spinner: NgxSpinnerService
-  ){
+    private spinner: NgxSpinnerService){
     this.spinner.show()
 
     setTimeout(() => {
@@ -24,5 +24,9 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide()
     }, 1000)
+  }
+
+  toggleSidebar() {
+    this.opened = !this.opened
   }
 }

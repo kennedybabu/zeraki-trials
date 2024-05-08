@@ -30,30 +30,19 @@ export class LoginComponent implements OnInit {
       let password = this.loginForm.value['password']
 
       this.loginService.login(this.loginForm.value).subscribe((res) => {
-        console.log(username,password )    
         if(res.statusCode == 200) {
           this.users = res.message
-
-          // let user = this.users.filter((obj: User) => username.includes(username)) 
-          // if(user) {
-            // }
-            
             let user = this.users.filter(obj => obj.username === username && obj.password === password)
-            console.log(user)
             if(user.length > 0) {
-              this.route.navigate(['/'])
+              this.loginService.saveData('user', JSON.stringify(user[0]))
+              this.route.navigate(['dash'])
           }
-        }  
-
-        console.log(this.users)
+        }
       })
     }
 
     reroute() {
       this.route.navigate(['auth/signup'])
     }
-    
- 
-
 
 }

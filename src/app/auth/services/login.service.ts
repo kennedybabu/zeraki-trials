@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import * as CryptoJS from 'crypto-js'; 
 
 @Injectable({
   providedIn: 'root'
@@ -46,4 +47,30 @@ export class LoginService {
     }
   )
   }
+
+  public saveData(key: string, value: string) {
+    localStorage.setItem(key, value)
+  }
+
+  public getData(key: string) {
+    return localStorage.getItem(key)
+  }
+
+  public removeData(key:string) {
+    localStorage.removeItem(key)
+  }
+
+  public clearData() {
+    localStorage.clear()
+  }
+
+  // private encrypt(obj: object, key: string) {
+  //   return CryptoJS.AES.encrypt(JSON.stringify(obj), key).toString()
+  // }
+
+  // private decrypt(objToDecrypt: string, key: string) {
+  //   return CryptoJS.AES.decrypt(objToDecrypt, key).toString(CryptoJS.enc.Utf8)
+  // }
+
+
 }

@@ -1,3 +1,38 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$zeraki-primary: mat.define-palette(mat.$indigo-palette);
+$zeraki-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$zeraki-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$zeraki-theme: mat.define-light-theme((
+  color: (
+    primary: $zeraki-primary,
+    accent: $zeraki-accent,
+    warn: $zeraki-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($zeraki-theme);
+
 /* You can add global styles to this file, and also import other style files */
 
 :root {
@@ -11,10 +46,11 @@
     --light-panel: #f8f9fb;
 }
 
+html, body { height: 100%; }
 
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif!important;
     // overflow-x: hidden;
 
     .title {
@@ -50,16 +86,14 @@ body {
     }
 
 
-    //center items
+    //universal center items
     .center-items {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    //
-
-    //remove outlines and borders on inputs
+    //univeral remove outlines and borders on inputs
     .no-outline {
         border: none;
         border-radius: 50px;
@@ -172,7 +206,6 @@ body {
                     font-weight: 600;
                 }
 
-
                 .form-sub-title {
                     color: var(--text-dark--gray);
                     font-size: 12px;
@@ -241,3 +274,11 @@ body {
     cursor: pointer;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+    //hide left container of the signup and login components on smaller screened device
+    .left-container {
+        display: none!important;
+    }
+  }
