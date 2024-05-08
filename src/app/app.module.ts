@@ -11,6 +11,9 @@ import { NavComponent } from './shared/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

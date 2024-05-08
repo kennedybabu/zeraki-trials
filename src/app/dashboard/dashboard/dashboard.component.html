@@ -6,11 +6,11 @@
                 <p>Phone Number: {{ userObject.msisdn }}</p>
                 <p>Role: {{userObject.role }}</p>
             </div>
-            <div class="row">
+            <div class="row justify-content-between gap-2">
                 <div class="card no-borders shadow col-md-4">
                   <div class="row">
                     <div class="col-md-5 p-2">
-                        <h6 class="chart-title">Total Students</h6>
+                        <h6 class="chart-title">Total Students {{ allStudents.length }}</h6>
                         <div id="chart">
                             <apx-chart
                               [series]="chartOptions.series"
@@ -25,8 +25,18 @@
                     </div>
                   </div>
                 </div>    
-                <div class="card no-borders shadow col-md-8">
+                <div class="card no-borders shadow col-md-7">
                     <app-mixed-chart></app-mixed-chart>
+                </div>
+            </div>
+            <div class="row justify-content-between col-sm-12 my-4">
+                <div class="card no-borders p-2 col-md-5">
+                    <h6 class="chart-title">Teachers</h6>
+                    <app-teacher-table></app-teacher-table>
+                </div>
+                <div class="card no-borders p-2 col-md-5">
+                    <h6 class="chart-title">Students</h6>
+                    <app-students-table></app-students-table>
                 </div>
             </div>
         </div>

@@ -1,16 +1,28 @@
-<mat-drawer-container class="example-container">
+<mat-drawer-container>
     <mat-drawer mode="over" [opened]="opened" position="start">
         <div class="flex-container px-2 justify-content-between">
             <div>
 
             </div>
             <div>
-                <p (click)="toggleSidebar()" style="cursor: pointer;color: #0f0f0f;font-size: 25px;font-weight: bold;" class="mb-0"><i class="bi bi-list"></i></p>
+                <p (click)="toggleSidebar()" style="cursor: pointer;color: #0f0f0f;font-size: 25px;font-weight: bold;" class="mb-0"><i class="bi bi-x"></i></p>
             </div>
         </div>
+        <mat-nav-list routerLink="/">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+        </mat-nav-list>
+        <mat-nav-list routerLink="/">
+            <i class="bi bi-person-circle"></i>
+            <span>Profile</span>
+        </mat-nav-list>
+        <mat-nav-list routerLink="/">
+            <i class="bi bi-arrow-90deg-down"></i>
+            <span>Logout</span>
+        </mat-nav-list>      
     </mat-drawer>
     <mat-drawer-content>
-        <app-nav></app-nav>
+        <app-nav (toggleSidenav)="toggleSidenav($event)"></app-nav>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

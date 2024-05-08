@@ -4,6 +4,14 @@ mat-toolbar {
         .inner-wrapper  {
             display: flex;
             justify-content: space-between;
+
+            .left-wrap {
+              div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
         
             .user-img {
                 width: 40px;

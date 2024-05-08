@@ -39,6 +39,8 @@ export class DashboardComponent implements OnInit {
     private studentService:StudentServiceTsService,
     private teacherService:TeacherService) {
       
+
+    //initiliaze the chart
     this.chartOptions = {
       series: [34, 44],
       chart: {
@@ -66,12 +68,12 @@ export class DashboardComponent implements OnInit {
     let user = localStorage.getItem('user')
     if(user) {
       this.userObject = JSON.parse(user)
-    }    
-
+    }
 
     this.getTotalStudents()
     this.getAllTeachers()
   }
+
 
   //get teachers 
   getAllTeachers() {

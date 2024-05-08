@@ -29,4 +29,8 @@ export class AppComponent implements OnInit {
   toggleSidebar() {
     this.opened = !this.opened
   }
+
+  toggleSidenav(event: Event) {
+    this.opened = !this.opened
+  }
 }

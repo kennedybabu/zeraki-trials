@@ -279,6 +279,16 @@ body {
     cursor: pointer;
 }
 
+//table stylings 
+
+mat-form-field {
+    height: 70px!important;
+}
+
+mat-paginator {
+    height: 60px;
+}
+
 
 
 @media only screen and (max-width: 600px) {
