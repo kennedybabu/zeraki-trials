@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import * as CryptoJS from 'crypto-js'; 
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -24,7 +23,7 @@ export class LoginService {
           "age": '15',
           "msisdn":'0709012312',
           "password": '1235',
-          "userId": 213
+          "userId": 42324240
         },
         {
           "username": 'Brian Leo',
@@ -42,7 +41,16 @@ export class LoginService {
           "age": '32',
           "msisdn":'0709012312',
           "password": '1235',
-          "userId": 213
+          "userId": 9083
+        },
+        {
+          "username": 'Nemo Moe',
+          "role": 'teacher',
+          "gender": 'female',
+          "age": '42',
+          "msisdn":'0709012110',
+          "password": '1235',
+          "userId": 3210,
         },
       ]
     }

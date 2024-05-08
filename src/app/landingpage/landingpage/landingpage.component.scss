@@ -41,15 +41,23 @@
             padding: 1rem;
         }
 
-        .pic-tiles-wrapper {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 10px;
+      .col-md-7 {
+        .flex-container {
+            .border {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #bebebe;
+                border-radius: 12px;
+                margin: .5rem 0;
+            }
 
-            .pic-tile {
-                background-color: tomato;
+            .flex-column {
+                padding: .5rem;
             }
         }
+      }
     }
 }

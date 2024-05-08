@@ -1,10 +1,21 @@
 # Zeraki
+A Performance Tracking Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
-## Development server
+## Installation
+- clone or fork the project
+- run npm install once in the root folder
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Possible logins
+- student
+    * username - Mona Lisa 
+    * password - 1235
+- teacher
+    * username - Alex Musili
+    * password - 1235
+- administrator
+    * username - Brian Leo
+    * password - 1235
 
 ## Code scaffolding
 
