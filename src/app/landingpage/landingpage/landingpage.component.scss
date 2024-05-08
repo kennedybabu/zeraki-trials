@@ -1,7 +1,6 @@
 .container-fluid {
     padding: 0;
     margin: 0;
-    padding-bottom: 2rem;
     height: auto;
 
     .hero-section {
@@ -34,7 +33,9 @@
     }
 
     .info-section {
-        height: 100vh;
+        min-height: 100vh;
+        // padding-bottom: 2rem;
+
 
         .col-md-5 {
             padding: 1rem;

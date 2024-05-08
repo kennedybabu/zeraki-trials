@@ -4,6 +4,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { Student } from '../../interface/student';
 import { StudentServiceTsService } from 'src/app/services/student.service.ts.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,14 +13,16 @@ import { StudentServiceTsService } from 'src/app/services/student.service.ts.ser
   styleUrls: ['./students-table.component.scss']
 })
 export class StudentsTableComponent implements AfterViewInit, OnInit {
-  displayedColumns: string[] = ['username', 'gender', 'class', 'msisdn']
+  displayedColumns: string[] = ['username', 'gender', 'class', 'msisdn','details']
   dataSource = new MatTableDataSource<Student>
   students: Student[]=[]
 
   @ViewChild(MatPaginator) paginator!: MatPaginator 
   @ViewChild(MatSort) sort!: MatSort 
 
-  constructor(private studentsService:StudentServiceTsService) {}
+  constructor(
+    private router:Router,
+    private studentsService:StudentServiceTsService) {}
 
   ngOnInit(): void {
     this.getAllStudents()    
@@ -37,6 +40,11 @@ export class StudentsTableComponent implements AfterViewInit, OnInit {
         this.students = res.message
       }
     })
+  }
+
+  viewProfile(row: any) {
+    console.log(row)
+    this.router.navigate([`profile/${row.userId}`])
   }
 
   applyFilter(event:Event) {

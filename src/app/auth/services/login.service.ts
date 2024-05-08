@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import * as CryptoJS from 'crypto-js'; 
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private router: Router) { }
 
   login(data: FormData):Observable<any> {   
 
@@ -62,6 +63,11 @@ export class LoginService {
 
   public clearData() {
     localStorage.clear()
+  }
+
+  logout() {
+    this.clearData()
+    this.router.navigate(['auth/login'])
   }
 
   // private encrypt(obj: object, key: string) {

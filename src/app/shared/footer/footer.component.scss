@@ -1,5 +1,11 @@
 .container-fluid {
     position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+    padding: 1rem;
     
     .container {
         .overlay {
@@ -12,10 +18,13 @@
             min-height: 100%;
             z-index: -1;
             background-color: rgba(0, 0, 0, 0.527);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
 
-            ul {
-                list-style: none;
-                padding: 0;
+            li {
+                cursor: pointer;
             }
         }
     }

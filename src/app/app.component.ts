@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { LoginService } from './auth/services/login.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,12 +11,13 @@ export class AppComponent implements OnInit {
   opened: boolean = false
 
   constructor(
-    private spinner: NgxSpinnerService){
+    private spinner: NgxSpinnerService,
+    private loginService:LoginService){
     this.spinner.show()
 
     setTimeout(() => {
       this.spinner.hide()
-    }, 1000)
+    }, 2000)
   }
 
   ngOnInit(): void {
@@ -32,5 +34,9 @@ export class AppComponent implements OnInit {
 
   toggleSidenav(event: Event) {
     this.opened = !this.opened
+  }
+
+  logout() {
+    this.loginService.logout()
   }
 }
